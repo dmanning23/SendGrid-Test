@@ -1,5 +1,5 @@
-﻿using SendGrid;
-using SendGrid.Transport;
+﻿using SendGridMail;
+using SendGridMail.Transport;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,7 @@ namespace SendGrid_Test
 			string pwd = args[1];
 
 			// Create the email object first, then add the properties.
-			var myMessage = Mail.GetInstance();
+			var myMessage = SendGrid.GetInstance();
 
 			// Add the message properties.
 			myMessage.From = new MailAddress("john@example.com");
